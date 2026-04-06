@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Source Serif 4', 'Georgia', serif;
+  color: #1a1a1a;
+  background-color: #fafaf8;
+  line-height: 1.75;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Header ===== */
+.site-header {
+  text-align: center;
+  padding: 48px 0 0;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.site-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 900;
+  font-size: 3.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+/* ===== Navigation ===== */
+.site-nav {
+  border-top: 1px solid #ccc;
+  padding: 12px 0;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.site-nav button {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #444;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  border-bottom: 1.5px solid transparent;
+}
+
+.site-nav button.active {
+  color: #1a1a1a;
+  font-weight: 600;
+  border-bottom-color: #1a1a1a;
+}
+
+/* ===== Main Content ===== */
+main {
+  padding: 48px 0 80px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ===== Home ===== */
+.home-section .home-image {
+  width: 40%;
+  margin: 32px auto;
+}
+
+.home-section .home-image img {
+  width: 100%;
+  display: block;
+}
+
+.home-section p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ===== Article ===== */
+.article-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-top: 24px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.article-section .byline {
+  font-size: 0.85rem;
+  color: #888;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+
+.article-section p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.article-section .article-image {
+  width: 80%;
+  margin: 32px auto;
+}
+
+.article-section .article-image img {
+  width: 100%;
+  display: block;
+}
+
+.article-section blockquote {
+  margin: 32px 0;
+  padding: 0 0 0 24px;
+  border-left: 3px solid #1a1a1a;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #333;
+}
+
+.article-section blockquote .quote-attribution {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-style: normal;
+  color: #666;
+}
+
+.article-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+/* ===== Gallery ===== */
+.gallery-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.gallery-grid .gallery-item {
+  flex: 0 0 calc((100% - 32px) / 3);
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0ee;
+}
+
+.gallery-grid .gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ===== Reference ===== */
+.reference-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.reference-section ol {
+  padding-left: 24px;
+}
+
+.reference-section li {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* ===== Topic ===== */
+.topic-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.topic-section p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 24px 0;
+  border-top: 1px solid #ddd;
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: 0.04em;
+}
